@@ -1,0 +1,82 @@
+function bai1counting1to100() {
+    for (let i = 1; i <= 100; i++) {
+        console.log(i);
+        if(i == 99){
+            alert("complete");
+        }
+    }
+}
+function bai2(){
+    let x =+prompt("nhap nhiet do");
+    while( x > 100 || x < 20){
+        if(x > 100) alert("hay giam nhiet do");
+        else if(x < 20) alert("hay giam nhiet do");
+        x =+prompt("nhap lai nhiet do");
+    }
+}
+function bai3(){
+    let x = [];
+    x[0] = 1;
+    x[1] = 1;
+    for (let i = 2; i <= 20 ; i++) {
+        x[i] = x[i-1] + x[i-2];
+    }
+    for (let i = 0; i <= 20 ; i++) {
+        console.log(x[i]);
+    }
+}
+function bai4(){
+    let x = [];
+    x[0] = 1;
+    x[1] = 1;
+    for (let i = 2; i <= 20 ; i++) {
+        x[i] = x[i-1] + x[i-2];
+        if(x[i]%5 == 0) {
+            console.log(x[i]);
+            break;
+        }
+    }
+}
+function bai5(){
+    let sum = 0,cnt =0;
+    for(let i = 0; ;i++) {
+        if (cnt == 30) {
+            break;
+        }
+        if (i % 7 == 0) {
+            sum += i;
+            cnt++;
+        }
+    }
+    console.log(sum);
+}
+function bai6(){
+    for(let i=1;i <= 100;i++){
+        if(i % 3 != 0 && i%5 != 0) {console.log(i);}
+        if( i%3 ==0){
+            if(i%5 == 0) console.log('FizzBuzz');
+            else console.log('Fizz');
+        }
+        else if( i%5 ==0){
+            if(i%3 == 0) console.log('FizzBuzz');
+            else console.log('Buzz');
+        }
+    }
+}
+function ramdomnumber(){
+    let x = +prompt('Bạn muốn đoán từ số 0 tới số');
+    const y = Math.floor(Math.random() * x);
+    console.log(y);
+    let k =+prompt('mới bạn đoán');
+    for(let i = 1; i <= 2 ;i++){
+        if(k == y){
+           document.getElementById("display").innerText="Đúng";
+        }
+        else{
+            if( k > y) document.getElementById("display").innerText="Số của bạn lớn hơn";
+            else if( k < y ) document.getElementById("display").innerText='SỐ của bạn bé hơn';
+            if(i == 2) document.getElementById("display").innerText='Bạn đẫ hết lần đoán';
+            k =+prompt('mới bạn đoán lại');
+        }
+    }
+}

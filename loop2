@@ -1,0 +1,74 @@
+unction fibonaci(){
+    let x = [100];
+    x[0] = 1;
+    x[1] = 1;
+    for(let i = 2; i <= 100;i++){
+        x[i] = x[i-1] + x[i-2];
+        console.log(x[i]);
+    }
+}
+function gt(){
+    let x = +prompt('Nhap so');
+    for (let i = 1; i <= x;i++){
+        x = x * i;
+    }
+    console.log(x);
+}
+function triangle(){
+    let n = +prompt('nhap chieu cao tam giac');
+    for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+  for(let i = 1; i <= n ;i++){
+      for(let j = 1; j <= n;j++){
+          if( j <= n-i ) document.write("p");
+          else document.write("*");
+      }
+      document.write("<br>");
+  }
+  document.write("<br>");
+    for(let i = 1; i <= n;i++){
+        for(let j = 1; j <= n;j++){
+            if( j <= n-i+1 ) document.write("*");
+            else document.write("p");
+        }
+        document.write("<br>");
+    }
+}
+function hcn(){
+    let x = +prompt("nhap chieu dai");
+    let y= +prompt("nhap chieu rong");
+    for(let i = 1 ; i <= x;i++){
+        for(let j = 1 ; j <= y;j++){
+            if( j == 1 || i == 1 || i == x || j == y){
+                document.write("*");
+            }
+            else{
+                document.write("p");
+            }
+        }
+        document.write("<br>");
+    }
+}
+function  tinhlaisuat(){
+    let x = +prompt("nhap so tien ban dau:");
+    let y = +prompt("nhap lai suat:");
+    let month =+prompt("so thang cho vay:");
+    for(let i = 1; i <= month ; i++){
+        x += x*y;
+    }
+    document.write(x);
+}

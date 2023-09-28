@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <button onclick="insnt()"></button>
+</body>
+</html>
+<script>
+    function snt(a){
+        if( a < 2) return 0;
+        for(let i=2; i <= Math.sqrt(a); i++){
+            if( a%i == 0) return 0;
+        }
+        return 1;
+    }
+    function insnt(){
+        let x=+ prompt("nhap n so nguyen to dau");
+        let t = 0;
+        let count = 0;
+        while(count < x){
+            t++;
+            if(snt(t)) {
+                document.write(t + "\n");
+                count++;
+            }
+        }
+    }
+</script>

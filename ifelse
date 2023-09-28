@@ -1,0 +1,122 @@
+function bai1(){
+    let x =+prompt("nhap so a");
+    let y =+prompt("nhap so b");
+    if(x % y == 0) alert("Yes");
+    else alert("No");
+}
+function bai2 (){
+    let x =+prompt("nhap so tuoi hoc sinh");
+    if( x < 16) alert("khong du tuoi hoc cap ba");
+    else alert("du tuoi hoc cap ba");
+}
+function bai3 (){
+    let x =+prompt("n");
+    if( n < 0 ) alert("so nho hon khong");
+    else alert("so lon hon khong");
+    }
+    function bai4 (){
+    let a =+prompt("nhap a");
+    let b =+prompt("nhap b");
+    let c =+prompt("nhap c");
+    let max = a;
+    if( b > max ) max = b;
+    else if( c > max ) max = c;
+    alert(max);
+
+    }
+    function bai5(){
+    let diem1 = +prompt("nhap diem kiem tra");
+    let diem2 =+prompt("nhap diem giua ki");
+    let diem3 =+prompt("nhap diem cuoi ki");
+    let trungbinh = (diem1 + diem2*2+ diem3*3)/3;
+    if( trungbinh >= 8.0) alert("gioi");
+    else if( trungbinh >= 6.5) alert("kha");
+    else if( trungbinh >= 5.0) alert("trung binh");
+    else alert("yeu");
+}
+function bai6 (){
+    let x =+ prompt("nhap doanh so ban hang");
+    let k =+ prompt("nhap gia san pham");
+    let y = 0;
+    if(x > 10000) {y = x*0.1*k;}
+    else if ( x < 10000 && x >= 3000 ) {
+        y = x*0.05*k;
+    }
+    else y = 0.01*x*k;
+}
+function bai7(){
+    let x =+ prompt("so phut cuoc goi");
+    let S;
+    if(x <= 50) S = x*500;
+    else if( x <= 100) S = 50*500 + (x-50)*400;
+    else (x > 100)  S = 50*500 + 50*1000 + (x-100)*300;
+    alert(S);
+}
+// [*Bài tập] Luyện tập cấu trúc điều kiện 02
+function bai1(){
+    let x = prompt("nhap do muon nhap");
+    let t =+prompt("nhap nhiet do");
+    if( x == 'C' || x=='c')
+    alert(x*9/5+32);
+    else if(x =='F' || x=='f')
+        alert((x-32)*5/9);
+}
+function bai6(){
+   let a =+prompt("nhap a");
+   let b =+prompt("nhap b");
+   if( a == 0) {
+       if( b == 0) alert("phuong trinh vo so nghiem");
+       else alert("  vo nghiem");
+   }
+   else{
+       let x = -b/a;
+       alert(x);
+   }
+}
+function bai7(){
+    let a =+prompt("nhap a");
+    let b =+prompt("nhap b");
+    let c =+prompt("nhap c");
+    if(a ==0){
+        if( b == 0) {
+            if( c == 0) alert("phuong trinh vo so nghiem");
+            else alert("  vo nghiem");
+        }
+        else{
+            let x = -b/a;
+            alert(x);
+        }
+    }
+    else{
+        let delta = b*2 - 4*a*c;
+        if( delta < 0) alert("phuong trinh vo nghiem");
+        else if( delta ==0) {
+            let x = -b/(2*a);
+            alert(x);
+        }
+        else{
+            let x1 = (-b + sqrt(delta))/(2*a);
+            let x1 = (-b - sqrt(delta))/(2*a);
+            alert("x1 = " + x1);
+            alert("x2 =" + x2);
+        }
+    }
+}
+function bao8 (){
+    let age = +prompt("nhap tuoi x");
+    if(age < 120 && age > 0) alert("la tuoi cua nguoi");
+    else    alert("khong la tuoi cua nguoi");
+}
+function bai9(){
+    let x =+ prompt("nhap a");
+    let y =+ prompt("nhap b");
+    let z = +prompt("nhap c");
+    if( x > 0 && y > 0 && z >0 && x+y > z && x+z > y && y+z > x) alert("la tam giac");
+    else alert("khong la tam giac");
+}
+function bai10(){
+    let x =+prompt("nhap so dien tieu thu");
+    if( x < 50) alert(x*1700);
+    else if( x <= 100) alert(50*1700+(x-50)*2500);
+    else if( x > 100) alert(50*1700+50*2500+(x-100)*3500);
+}

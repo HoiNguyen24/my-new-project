@@ -1,0 +1,45 @@
+function bai1(){
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    for(let i = 0; i < a.length; i++){
+        document.write("row " + i + "<br>");
+        for (let j = 0; j < a[i].length; j++){
+            document.write(a[i][j]+"<br>");
+        }
+        document.write("<br>");
+    }
+}
+function bai2(){
+    let a =[ 'c', 's', 'c', '2', '6', '1' ];
+    for (let i = a.length-1; i >= 0; --i) {
+        document.write(a[i]);
+    }
+}
+function bai3(){
+    let a ="code gym la la la la";
+    let count = 0;
+    for (let i = 0; i < a.length;i++) {
+        if( a[i] == " ") count++;
+    }
+    console.log(count+1);
+}
+function bai4(){
+    let x = prompt("nhap chuoi 1");
+    let y = prompt("nhap chuoi 2");
+    if( x === y) {
+        console.log("giong nhau");
+    }
+    else{
+        console.log("khong giong nhau");
+    }
+}
+function bai5(){
+    let x = prompt("nhap chuoi");
+    x = x.replace("-","_");
+    document.write(x);
+}

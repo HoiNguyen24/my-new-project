@@ -1,1 +1,150 @@
+function bai1(){
+    let array = Array(10);
+    for (let i = 1; i <= 10; i++){
+        array[i] = +prompt("nhap so thu"+ i +" vao ");
+    }
+    for (let i = 1;i<= 10;i++){
+        if(array[i] >= 10) document.write(array[i]);
+    }
+}
+function bai2(){
+    let array = Array(10);
+    for (let i = 1; i <= 10; i++){
+        array[i] = +prompt("nhap so thu"+ i +" vao ");
+    }
+    let max = array[1];
+    for (let i = 1;i<= 10;i++){
+        if(array[i]> max) max = array[i];
+    }
+    for( let i = 1 ;i <= 10;i++){
+        if(array[i] === max) {
+            document.write(array[i] +" o vi tri thu" + i);
 
+        }
+    }
+}
+function bai3(){
+    let array = Array(10);
+    for (let i = 1; i <= 10; i++){
+        array[i] = +prompt("nhap so thu"+ i +" vao ");
+    }
+    let max = array[1];
+    let S = 0 ;
+    for (let i = 1;i<= 10;i++){
+        if(array[i]> max) max = array[i];
+        S += array[i];
+    }
+    document.write(max);
+    let avg = S / array.length;
+}
+function bai4(){
+    let x = +prompt("nhap so phan tu muon nhap");
+    let array = Array(10);
+    for (let i = 0; i < x; i++){
+        array[i] = +prompt("nhap so thu"+ (i+1)+" vao ");
+    }
+    let l = 0;
+    let r = array.length-1;
+    while(l < r){
+        let temp = array[l];
+        array[l]= array[r];
+        array[r]= temp;
+        l++;
+        r--;
+    }
+    for (let i = 0; i < array.length; i++){
+       console.log(array[i]);
+    }
+}
+function bai5 (){
+    let array = Array(10);
+    for (let i = 1; i <= 10; i++){
+        array[i] = +prompt("nhap so thu"+ i +" vao ");
+    }
+    let count = 0;
+    for (let i = 0; i < array.length; i){
+        if( array[i] < 0) { count++;}
+    }
+    console.log(count);
+}
+function bai6(){
+    let array = Array(10);
+    for (let i = 1; i <= 10; i++){
+        array[i] = +prompt("nhap so thu"+ i +" vao ");
+    }
+    let x = +prompt("nhap phan tu muon tim trong mang");
+    let check = false;
+    for (let i = 0 ; i < array.length;i++){
+        if( array[i] === x ){
+            check = true;
+            break;
+        }
+    }
+    if(check){
+        console.log("v is in the array");
+    }
+    else {
+        console.log("v is not in the array");
+    }
+}
+function bai7(){
+    let array = Array(10);
+    for (let i = 1; i <= 10; i++){
+        array[i] = +prompt("nhap so thu"+ i +" vao ");
+    }
+    let n = 9;
+    let x = +prompt("nhap phan tu muon xoa");
+    for (let i = 0;i < 10; i++){
+        if(array[i] == x){
+            for(let j = i + 1; j < 10; j++){
+                array[j-1] = array[j];
+            }
+            array[n] = 0;
+            n--;
+            i--;
+            continue;
+        }
+    }
+    for (let i = 0; i < 10; i++){
+        if(array[i] != 0)
+        console.log(array[i]);
+    }
+}
+function bai8(){
+    let array = Array(10);
+    for (let i = 1; i <= 10; i++){
+        array[i] = +prompt("nhap so thu"+ i +" vao ");
+    }
+    for(let i =0;i< 10 ; i++){
+        for(let j =i+1;j < 10;j++){
+            if(array[j] > array[i]) {
+                let temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+            }
+        }
+    }
+    for (let i = 0; i < 10; i++){
+        console.log(array[i]);
+    }
+}
+function bai9(){
+    let a = Array(20);
+    let b = Array(10);
+    let c = Array(30);
+    for (let i = 0; i < 20; i++) {
+        a[i] = +prompt("nhap so thu" + i+1+ " : ");
+    }
+    for (let i = 0; i < 10; i++) {
+        b[i] = +prompt("nhap so thu" + i+1 +" : ");
+    }
+    for (let i = 0; i < 20; i++) {
+        c.push(a[i]);
+    }
+    for(let i = 0; i < 10 ; i++){
+        c.push(b[i]);
+    }
+    for (let i = 0; i < 30; i++) {
+        document.write(c[i]);
+    }
+}

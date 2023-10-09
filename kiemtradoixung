@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+       function isPalindrome(a,l,r){
+           if( r == l + 1 && a[l] == a[r]) return true;
+           if( l === r) return true;
+           else {
+               if(a[l] != a[r]) return false;
+               else return isPalindrome(a,l + 1,r - 1);
+           }
+       }
+       let a = "kooik";
+       let l = 0;
+       let r = a.length-1;
+       if(isPalindrome(a,l,r)) alert("la palindrome");
+       else alert("ko la palindrome");
+</script>
+</body>
+</html>

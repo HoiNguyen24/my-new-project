@@ -1,0 +1,55 @@
+let product = [];
+let html ="";
+function displayProduct(array) {
+    let html = "";
+    for (let i = 0; i < array.length; i++) {
+        html += "<tr>";
+        html += "<td>" + (i+1) + "</td>";
+        for (let j = 0; j < array[i].length; j++) {
+            html += "<td>" + array[i][j] + "</td>";
+        }
+        html += "<td>" + `<button onclick="deleteProduct(${i})">Delete</button>` + "</td>";
+        html += "<td>" + `<button onclick="editProduct(${i})">Edit</button>` +"</td>";
+        html += "</tr>";
+    }
+    document.getElementById("list-product").innerHTML = html;
+}
+function deleteProduct(index) {
+    if(confirm('Are you sure you want to delete')){
+        product.splice(index, 1);
+        displayProduct(product);
+    }
+}
+let modal = document.getElementById("productmodal");
+let confirmrenew = document.getElementById("confirmrenew");
+function editProduct(index) {
+         modal.style.display = "block";
+         confirmrenew.value = index;
+}
+function renewproduct(index){
+    index = parseInt(index, 10);
+    product[index][0] = document.getElementById("nameProduct").value;
+    product[index][1] = document.getElementById("authorProduct").value;
+    product[index][2] = +document.getElementById("priceProduct").value;
+    modal.style.display = "none" ;
+    displayProduct(product);
+}
+let close = document.getElementsByClassName("close")[0];
+close.onclick = function() {
+    modal.style.display = "none";
+}
+let nameProduct = document.getElementById("nameProduct");
+let authorProduct = document.getElementById("authorProduct");
+let priceProduct = document.getElementById("priceProduct");
+function add(){
+    let array = [];
+    let x = document.getElementById("name").value;
+    array.push(x);
+    let y = document.getElementById("author").value;
+    array.push(y);
+    let z =+ document.getElementById("price").value;
+    array.push(z);
+    product.push(array);
+    nameProduct.value = authorProduct.value = priceProduct.value ="";
+    displayProduct(product);
+}

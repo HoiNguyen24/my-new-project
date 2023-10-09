@@ -5,11 +5,7 @@ function isPrime(a){
     }
     return true;
 }
-function isPalandrome(a){
-    let b = a.reverse();
-    if( b === a) aleart("is Palandrome");
-    else aleart("is not palandrome");
-}
+
 function bai1(a){
     return a*a;
 }

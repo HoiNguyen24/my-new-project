@@ -1,0 +1,74 @@
+function isPrime(a){
+    if(a < 2) return false;
+    for(var i = 2; i <= Math.sqrt(a); i++){
+        if(a % i == 0 ) return false;
+    }
+    return true;
+}
+function isPalandrome(a){
+    let b = a.reverse();
+    if( b === a) aleart("is Palandrome");
+    else aleart("is not palandrome");
+}
+function bai1(a){
+    return a*a;
+}
+//bai2
+function bai2chuvi (a){
+    return 2*a*3.14;
+}
+function bai2dientich(a){
+    return a*a*3.14;
+}
+function bai3(a){
+    let S = 1;
+    for(var i = 1; i<= a;i++){
+        S *= i;
+    }
+    return S;
+}
+function bai4(x){
+    x = parseInt(x, 10);
+    if( x <= 9 && x >= 0) return true;
+    else return false;
+
+}
+function bai5 (a,b,c){
+    min = a;
+    if( b < min) min = b;
+    if( c < min) min = c;
+    return min;
+}
+function bai6 (a){
+    if( a >= 0) return true;
+    else return false;
+}
+function test (){
+    let x = "code";
+    let y ="o";
+    let k=bai9(x,y);
+    console.log(k);
+}
+function bai7(){
+    
+}
+function bai8 (a){
+     let l= 0;
+     let r = a.length-1;
+     while(l< r){
+         let temp = a[l];
+         a[l] = a[r];
+         a[r] = temp;
+         l++;
+         r--;
+     }
+     return a;
+}
+function bai9(a,b){
+    let count = 0;
+    for(let i = 0; i < a.length;i++){
+        if(a[i] == b) count++;
+    }
+    if(count > 0) return count;
+    else return -1;
+}
